@@ -1,6 +1,9 @@
 // INIT GITHUB
 const github = new Github();
 
+// INIT UI
+const ui = new UI();
+
 // SEARCH INPUT
 const searchUser = document.getElementById('searchUser');
 
@@ -16,6 +19,8 @@ searchUser.addEventListener('keyup', (e) => {
         //   SHOW ALERT
       } else {
         // SHOW PROFILE
+        ui.showProfile(data.profile);
+        console.log(data);
       }
     });
   } else {
